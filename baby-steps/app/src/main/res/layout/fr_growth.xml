@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/padding_16dp"
+    android:paddingLeft="@dimen/growth_fragment_left_right_margin"
+    android:paddingStart="@dimen/growth_fragment_left_right_margin"
+    android:paddingRight="@dimen/growth_fragment_left_right_margin"
+    android:paddingEnd="@dimen/growth_fragment_left_right_margin"
+    android:paddingBottom="@dimen/padding_bottom_ads">
+
+    <TextView
+        android:id="@+id/label_date"
+        style="@style/TVTableHead"
+        android:text="@string/date"
+        app:layout_constraintEnd_toStartOf="@+id/label_age"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/label_age"
+        style="@style/TVTableHead"
+        android:text="@string/age"
+        app:layout_constraintEnd_toStartOf="@+id/label_weight"
+        app:layout_constraintStart_toEndOf="@+id/label_date"/>
+
+    <TextView
+        android:id="@+id/label_weight"
+        style="@style/TVTableHead"
+        android:text="@string/weight"
+        app:layout_constraintEnd_toStartOf="@+id/label_height"
+        app:layout_constraintStart_toEndOf="@+id/label_age"/>
+
+    <TextView
+        android:id="@+id/label_height"
+        style="@style/TVTableHead"
+        android:text="@string/height"
+        app:layout_constraintEnd_toStartOf="@+id/label_head"
+        app:layout_constraintStart_toEndOf="@+id/label_weight"/>
+
+    <TextView
+        android:id="@+id/label_head"
+        style="@style/TVTableHead"
+        android:text="@string/head"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_height"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_growth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_date"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

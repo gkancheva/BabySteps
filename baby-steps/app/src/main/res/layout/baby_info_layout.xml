@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/label_baby_info"
+        android:text="@string/label_babys_information"
+        style="@style/TvTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_baby_name"
+        style="@style/TextLabel"
+        android:layout_marginTop="@dimen/padding_16dp"
+        android:text="@string/label_baby_name"
+        app:layout_constraintTop_toBottomOf="@id/label_baby_info"/>
+
+    <EditText
+        android:id="@+id/tv_baby_name"
+        style="@style/TextView"
+        android:layout_marginTop="@dimen/padding_8dp"
+        app:layout_constraintTop_toBottomOf="@id/label_baby_name"
+        tools:text="Maya" />
+
+    <TextView
+        android:id="@+id/label_date_of_birth"
+        style="@style/TextLabel"
+        android:layout_marginTop="@dimen/padding_16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_baby_name"
+        android:text="@string/label_date_of_birth"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/tv_date_of_birth"
+        style="@style/TextView"
+        android:layout_marginTop="@dimen/padding_8dp"
+        app:layout_constraintTop_toBottomOf="@id/label_date_of_birth"
+        tools:text="3rd of May 2018, Thursday" />
+
+</android.support.constraint.ConstraintLayout >

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c0ca33</color>
+    <color name="colorPrimaryLight">#ebf363</color>
+    <color name="colorPrimaryDark">#8c9900</color>
+    <color name="colorAccent">#607d8b</color>
+    <color name="colorAccentLight">#8eacbb</color>
+    <color name="colorAccentDark">#34515e</color>
+    <color name="colorPrimaryText">@color/colorAccentDark</color>
+    <color name="colorAccentText">#ffffff</color>
+
+    <color name="colorBackground">#fafafa</color>
+
+    <color name="scrimStartColor">#CC000000</color>
+    <color name="scrimCenterColor">#66000000</color>
+    <color name="scrimEndColor">#00000000</color>
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_16dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/padding_bottom_ads">
+
+        <Button
+            android:id="@+id/btn_breast_feeding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_8dp"
+            android:layout_marginRight="@dimen/padding_8dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/btn_breast_feeding"
+            app:layout_constraintEnd_toStartOf="@+id/btn_bottle_feeding"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_bottle_feeding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_8dp"
+            android:layout_marginStart="@dimen/padding_8dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/btn_bottle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_breast_feeding"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_timer_on"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_16dp"
+            android:textSize="@dimen/txt_size_16sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/timer"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Breast feeding" />
+
+        <Chronometer
+            android:id="@+id/timer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_16dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/txt_size_16sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_timer_on"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="00:50" />
+
+        <Button
+            android:id="@+id/btn_timer_stop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/btn_finish"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/timer" />
+
+        <TextView
+            android:id="@+id/tv_latest_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:padding="@dimen/padding_8dp"
+            android:textSize="@dimen/txt_size_16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/btn_breast_feeding"
+            tools:text="Latest activity: 2h30 ago" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="100dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_feeding_activities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

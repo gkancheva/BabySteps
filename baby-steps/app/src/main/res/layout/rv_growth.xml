@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SelectableItemBackground">
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/TVTableRow"
+        tools:text="21Jul2018"
+        app:layout_constraintEnd_toStartOf="@+id/tv_age"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_age"
+        style="@style/TVTableRow"
+        tools:text="1m"
+        app:layout_constraintEnd_toStartOf="@+id/tv_weight"
+        app:layout_constraintStart_toEndOf="@+id/tv_date"/>
+
+    <TextView
+        android:id="@+id/tv_weight"
+        style="@style/TVTableRow"
+        tools:text="5kg"
+        app:layout_constraintEnd_toStartOf="@+id/tv_height"
+        app:layout_constraintStart_toEndOf="@+id/tv_age"/>
+
+    <TextView
+        android:id="@+id/tv_height"
+        style="@style/TVTableRow"
+        tools:text="53cm"
+        app:layout_constraintEnd_toStartOf="@+id/tv_head"
+        app:layout_constraintStart_toEndOf="@+id/tv_weight"/>
+
+    <TextView
+        android:id="@+id/tv_head"
+        style="@style/TVTableRow"
+        tools:text="32cm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_height"/>
+
+</android.support.constraint.ConstraintLayout>

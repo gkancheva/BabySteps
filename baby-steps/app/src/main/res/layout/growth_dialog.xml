@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/padding_8dp">
+
+    <TextView
+        android:id="@+id/label_date"
+        style="@style/LeftSideElementDialog"
+        android:text="@string/date"
+        app:layout_constraintTop_toTopOf="@id/et_date"
+        app:layout_constraintBottom_toBottomOf="@id/et_date" />
+
+    <TextView
+        android:id="@+id/label_weight"
+        style="@style/LeftSideElementDialog"
+        android:text="@string/weight"
+        app:layout_constraintTop_toTopOf="@id/et_weight"
+        app:layout_constraintBottom_toBottomOf="@id/et_weight"/>
+
+    <TextView
+        android:id="@+id/label_height"
+        style="@style/LeftSideElementDialog"
+        android:text="@string/height"
+        app:layout_constraintTop_toTopOf="@id/et_height"
+        app:layout_constraintBottom_toBottomOf="@id/et_height"/>
+
+    <TextView
+        android:id="@+id/label_head"
+        style="@style/LeftSideElementDialog"
+        android:text="@string/head"
+        app:layout_constraintTop_toTopOf="@id/et_head"
+        app:layout_constraintBottom_toBottomOf="@id/et_head"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <EditText
+        android:id="@+id/et_date"
+        style="@style/RightSideElementTextView"
+        tools:text="21Jul2018" />
+
+    <EditText
+        android:id="@+id/et_weight"
+        style="@style/RightSideElementTextView"
+        tools:text="4.070"
+        android:hint="@string/hint_weight"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/et_date"/>
+
+    <EditText
+        android:id="@+id/et_height"
+        style="@style/RightSideElementTextView"
+        tools:text="52"
+        android:hint="@string/hint_height"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/et_weight"/>
+
+    <EditText
+        android:id="@+id/et_head"
+        style="@style/RightSideElementTextView"
+        tools:text="32"
+        android:hint="@string/hind_head"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/et_height"/>
+
+</android.support.constraint.ConstraintLayout>

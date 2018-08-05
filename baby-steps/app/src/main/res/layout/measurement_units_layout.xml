@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/label_measurement_units"
+        android:text="@string/label_measurement_units"
+        style="@style/TvTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/btn_metric_units"
+        android:padding="@dimen/padding_16dp"
+        style="@style/LeftSideElement"
+        android:text="@string/kg_cm_ml"
+        app:layout_constraintTop_toBottomOf="@id/label_measurement_units"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <RadioButton
+        android:id="@+id/btn_imperial_units"
+        android:padding="@dimen/padding_16dp"
+        style="@style/RightSideElement"
+        android:text="@string/lb_in_oz"
+        app:layout_constraintTop_toBottomOf="@id/label_measurement_units"/>
+
+
+</android.support.constraint.ConstraintLayout>
